@@ -19,3 +19,23 @@ def rev_str1(string):
 print(rev_str1("part"))
 print(rev_str1("reward"))
 print(rev_str1(""))
+
+def rev_str2(string):
+    ''' Method reverses a string using python's built-in method '''
+    string = "".join(reversed(string))
+    return string
+
+print(rev_str2("part"))
+print(rev_str2("reward"))
+print(rev_str2(""))
+
+def rev_str3(string):
+    ''' Method reverses a string using recursion '''
+    if len(string) == 0:
+        return string
+    return rev_str3(string[1:]) + string[0]
+
+print(rev_str3("part"))
+print(rev_str3("reward"))
+print(rev_str3(""))
+
